@@ -9,12 +9,17 @@ body{
     color: #ffffff;
     font-size: 3rem;
 }
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
 html,body{
     overflow-x: hidden;
 }
 img{
     width: 100%;
 }
+
 
 /*-----------------------------//base-----------------------------*/
 
@@ -43,38 +48,39 @@ img{
 .header-title p{
     margin-left: 10px;
 }
+.header-title:hover{
+    transition: all .5s;
+    opacity: .5;
+}
 .header-menu{
     display: flex;
     text-align: center;
-    align-items: center;
     height: 100%;
 }
-.login{
+.stretch-img{
+    width: 45px;
+    height: 45px;
+
 }
 .sign-up{
     display: flex;
     text-align: center;
     align-items: center;
-    color: #ffffff;
-    text-decoration: none;
     padding: 20px;
-    
 }
 .sign-up p{
     margin-left: 10px;
 }
 .sign-up:hover{
     transition: all .5s;
-    background-color: #57650f;
+    opacity: .5;
 }
 .setting{
-    color: #ffffff;
-    text-decoration: none;
     padding: 20px 26.5px;
 }
 .setting:hover{
     transition: all .5s;
-    background-color: #57650f;
+    opacity: .5;
 }
 /*-----------------------------//header-----------------------------*/
 .main{
@@ -84,10 +90,17 @@ img{
     width: 100%;
     height: 100vh;
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
-.main-inner{
-    text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+.timer-img{
+    max-width: 25vw;
+    width: 400px;
+}
+.timer-btn{
+    padding: 10px 30px;
+    border: solid #ffffff;
+    border-radius: 30px;
 }
