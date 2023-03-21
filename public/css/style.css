@@ -19,8 +19,6 @@ html,body{
 img{
     width: 100%;
 }
-
-
 /*-----------------------------//base-----------------------------*/
 
 /*-----------------------------header-----------------------------*/
@@ -99,8 +97,20 @@ img{
     max-width: 25vw;
     width: 400px;
 }
-.timer-btn{
-    padding: 10px 30px;
-    border: solid #ffffff;
+#button1{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 3rem;
+    background-color: transparent;
+    border: solid 3px #ffffff;
     border-radius: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 25px;
+    appearance: none;
+}
+#button1:hover{
+    transition: all .5s;
+    color: #a2bd1c;
+    background-color: #fff;
 }
