@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
-    <script src="js/script.js"></script>
+    
 </head>
 
 <body>
@@ -28,9 +28,15 @@
                         <p>ログイン</p>
                     </a>
                 </div>
-                <a href="/setting" class="setting">
+                <div class="setting-btn">
                     <i class="fa-solid fa-gears"></i>
-                </a>   
+                </div>
+                <div class="setting-menu">
+                    <div class="menu-title">設定</div>
+                    <div class="menu-item">背景</div>
+                    <div class="menu-item">音楽</div>
+                    <div class="menu-item">その他</div>
+                </div>   
             </div>
         </div>
     </header>
@@ -39,5 +45,7 @@
         <p id="default">10</p>
         <input id="button1" type="button" value="ボタンを押す" onclick="count_start()">
     </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
