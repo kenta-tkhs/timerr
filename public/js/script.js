@@ -1,9 +1,10 @@
+let display = document.getElementById("default");
+var obj1 = document.getElementById('count');
 var count = 10;
-var sec = null;
-var rest = 5;
-var times = 4;
-var stp = null;
-
+let obj2 = document.getElementById('rest');
+let rest = 5;
+let sum = count + rest;
+let times = 4;
 
 
 function count_start(){
@@ -12,36 +13,22 @@ function count_start(){
 
 
 function count_down(){
-    let rest_time = true;
-    const display = document.getElementById("default");
-    if(rest_time){
-        if(rest === 1){
-            if(times === 1){
-                display.innerHTML = "error";
-                clearInterval(stp);
-            }else{
-                rest = 5;
-                rest_time = false;
-                display.innerHTML = (4-times)+"休憩終了!";
-            }            
+    let display = document.getElementById("default");
+    if(sum === 1){
+        if(times === 1){
+            display.innerHTML = "お疲れさまでした!";
+            clearInterval(stp);
         }else{
-            rest--;
-            display.innerHTML = rest;
-        }
+            sum = count + rest;
+            times--;
+            display.innerHTML = (4-times)+"セット終了!";
+        }            
     }else{
-        if(count === 1){
-            if(times === 1){
-                display.innerHTML = "お疲れさまでした!";
-                clearInterval(stp);
-            }else{
-                count = 10;
-                times--;
-                display.innerHTML = (4-times)+"セット終了!";
-                rest_time = True;
-            }            
+        sum--;
+        if(sum === count){
+            display.innerHTML = "休憩終了!";
         }else{
-            count--;
-            display.innerHTML = count;
+            display.innerHTML = sum % count;
         }
     }
 }

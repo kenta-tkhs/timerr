@@ -55,3 +55,19 @@ var count = 180; //カウントダウンの数字を格納する変数
             stop.addEventListener("click",count_stop, false);
             reset.addEventListener("click",count_reset,false);
         }     
+
+        let display = document.getElementById("default");
+    if(count === 1){
+        if(times === 1){
+            display.innerHTML = "お疲れさまでした!";
+            clearInterval(stp);
+        }else{
+            count = 10;
+            times--;
+            display.innerHTML = (4-times)+"セット終了!";
+            rest_time = True;
+        }            
+    }else{
+        count--;
+        display.innerHTML = count;
+    }
