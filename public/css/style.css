@@ -74,7 +74,6 @@ img{
     transition: all .5s;
     opacity: .5;
 }
-<<<<<<< HEAD
 .login{
     margin-right: 70px;
 }
@@ -102,9 +101,6 @@ img{
 .slide-menu.active{
     right: 0px;
 }
-=======
-
->>>>>>> 08f4d1068bd60e730d20448cc80116fceafb949d
 /*-----------------------------//header-----------------------------*/
 .main{ 
     background-color: #a2bd1c;
@@ -179,7 +175,4 @@ img{
 }
 .menu-item{
     height: 33%;
-}
-.menu-item:first-child{
-
 }
