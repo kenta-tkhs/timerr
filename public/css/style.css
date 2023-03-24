@@ -19,7 +19,6 @@ html,body{
 img{
     width: 100%;
 }
-
 /*-----------------------------//base-----------------------------*/
 
 /*-----------------------------header-----------------------------*/
@@ -29,7 +28,7 @@ img{
     position: absolute;
     top: 0;
     left: 50%;
-    z-index: 3;
+    z-index: 0;
     transform: translateX(-50%);
     box-sizing: border-box;
 }
@@ -54,12 +53,12 @@ img{
 .header-menu{
     display: flex;
     text-align: center;
+    align-items: center;
     height: 100%;
 }
 .stretch-img{
     width: 45px;
     height: 45px;
-
 }
 .sign-up{
     display: flex;
@@ -74,9 +73,49 @@ img{
     transition: all .5s;
     opacity: .5;
 }
-
+.login{
+    margin-right: 70px;
+}
 /*-----------------------------//header-----------------------------*/
-.main{
+
+/*-----------------------------slide-menu-----------------------------*/
+.humberger-menu{
+    position: fixed;
+    cursor: pointer;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+}
+.humberger-menu:hover{
+    transition: all .5s;
+    opacity: .5;
+}
+.slide-menu{
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: #555555;
+    transition: all .5s;
+    z-index: 5;
+    font-size: 2.5rem;
+}
+.slide-menu.active{
+    right: 0px;
+}
+.menu-title{
+    margin: 20px;
+    text-align: left;
+}
+.menu-item{
+    padding: 15px 0;
+    border-bottom: solid #cccccc 1px;
+}
+/*-----------------------------//slide-menu-----------------------------*/
+
+/*-----------------------------main-----------------------------*/
+.main{ 
     background-color: #a2bd1c;
     background-position: center;
     background-size: cover;
@@ -90,7 +129,7 @@ img{
 }
 .timer-img{
     max-width: 25vw;
-    width: 400px;
+    width: 400px
 }
 #button1{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -109,47 +148,4 @@ img{
     color: #a2bd1c;
     background-color: #fff;
 }
-
-.setting-btn{
-    padding: 20px 26.5px;
-    z-index: 3;
-}
-.setting-btn:hover{
-    transition: all .5s;
-    opacity: .5;
-}
-.setting-menu{
-    position: fixed;
-    top: 0;
-    right: -300px;
-    z-index: 2;
-    width: 300px;
-    height: 100vh;
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    transition: all .5s;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, .7);
-}
-.setting-menu{
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity .3s linear;
-}
-.setting-menu.active{
-    pointer-events: auto;
-    right: 0;
-    opacity: 1;
-}
-.menu-title{
-    text-align: left;
-    margin: 20px;
-}
-.menu-item{
-    height: 33%;
-}
-.menu-item:first-child{
-
-}
+/*-----------------------------//main-----------------------------*/
