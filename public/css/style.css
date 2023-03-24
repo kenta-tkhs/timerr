@@ -111,6 +111,32 @@ img{
 .menu-item{
     padding: 15px 0;
     border-bottom: solid #cccccc 1px;
+    transition: all .5s;
+    cursor: pointer;
+    display: block;
+}
+.menu-item-title{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: all .5s;
+}
+.menu-item-title span{
+    color: #a2bd1c;
+}
+.menu-item-title span.active{
+    content: "-";
+}
+.menu-item.active{
+    transition: all .5s;
+}
+.menu-item-content{
+    display: none;
+    transition: all .5s;
+}
+.menu-item-content.active{
+    display: block;
+    transition: all .5s;
 }
 /*-----------------------------//slide-menu-----------------------------*/
 
