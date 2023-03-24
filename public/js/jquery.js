@@ -2,7 +2,16 @@ $(function() {
     $('.humberger-menu').on('click', function() {
       $('.main').toggleClass('active');
       $('.slide-menu').toggleClass('active');
+      $('.menu-exit').toggleClass('active');
     });
+});
+
+$(function() {
+  $('.menu-exit').on('click', function() {
+    $('.main').toggleClass('active');
+    $('.slide-menu').toggleClass('active');
+    $(this).toggleClass('active');
+  });
 });
 
 $('.menu-item').click(function(){

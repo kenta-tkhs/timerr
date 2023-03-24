@@ -84,7 +84,6 @@ img{
     cursor: pointer;
     top: 20px;
     right: 30px;
-    z-index: 10;
 }
 .humberger-menu:hover{
     transition: all .5s;
@@ -103,6 +102,21 @@ img{
 }
 .slide-menu.active{
     right: 0px;
+}
+.menu-exit{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    padding: 0 15px;
+    top: 15px;
+    right: 300px;
+    font-size: 35px;
+    color: #555555;
+    border: solid #555555 3px;
+    border-radius: 5px;
+}
+.menu-exit.active{
+    display: block;
 }
 .menu-title{
     margin: 20px;
@@ -152,6 +166,10 @@ img{
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    transition: all .5s;
+}
+.main.active{
+    filter: brightness(50%);
 }
 .timer-img{
     max-width: 25vw;
