@@ -116,7 +116,7 @@ img{
 }
 .timer-img{
     max-width: 25vw;
-    width: 400px;
+    width: 400px
 }
 #button1{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -134,45 +134,4 @@ img{
     transition: all .5s;
     color: #a2bd1c;
     background-color: #fff;
-}
-
-.setting-btn{
-    padding: 20px 26.5px;
-    z-index: 3;
-}
-.setting-btn:hover{
-    transition: all .5s;
-    opacity: .5;
-}
-.setting-menu{
-    position: fixed;
-    top: 0;
-    right: -300px;
-    z-index: 2;
-    width: 300px;
-    height: 100vh;
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    transition: all .5s;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, .7);
-}
-.setting-menu{
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity .3s linear;
-}
-.setting-menu.active{
-    pointer-events: auto;
-    right: 0;
-    opacity: 1;
-}
-.menu-title{
-    text-align: left;
-    margin: 20px;
-}
-.menu-item{
-    height: 33%;
 }
