@@ -55,3 +55,52 @@ var count = 180; //カウントダウンの数字を格納する変数
             stop.addEventListener("click",count_stop, false);
             reset.addEventListener("click",count_reset,false);
         }     
+
+        if(count === 1){
+            if(times === 1){
+                display.innerHTML = "お疲れさまでした!";
+                clearInterval(stp);
+            }else{
+                count = 10;
+                times--;
+                display.innerHTML = (4-times)+"セット終了!";
+                rest_time = True;
+            }            
+        }else{
+            count--;
+            display.innerHTML = count;
+        }
+
+        //function count_down(){
+            const display = document.getElementById("default");
+            if(rest_time){
+                if(rest === 1){
+                    if(times === 1){
+                        display.innerHTML = "error";
+                        clearInterval(stp);
+                    }else{
+                        rest = 5;
+                        rest_time = false;
+                        display.innerHTML = (4-times)+"休憩終了!";
+                    }            
+                }else{
+                    rest--;
+                    display.innerHTML = rest;
+                }
+            }else{
+                if(count === 1){
+                    if(times === 1){
+                        display.innerHTML = "お疲れさまでした!";
+                        clearInterval(stp);
+                    }else{
+                        count = 10;
+                        times--;
+                        display.innerHTML = (4-times)+"セット終了!";
+                        rest_time = True;
+                    }            
+                }else{
+                    count--;
+                    display.innerHTML = count;
+                }
+            }
+        //}
