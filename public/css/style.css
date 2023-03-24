@@ -59,7 +59,6 @@ img{
 .stretch-img{
     width: 45px;
     height: 45px;
-
 }
 .sign-up{
     display: flex;
@@ -77,6 +76,9 @@ img{
 .login{
     margin-right: 70px;
 }
+/*-----------------------------//header-----------------------------*/
+
+/*-----------------------------slide-menu-----------------------------*/
 .humberger-menu{
     position: fixed;
     cursor: pointer;
@@ -97,11 +99,22 @@ img{
     background: #555555;
     transition: all .5s;
     z-index: 5;
+    font-size: 2.5rem;
 }
 .slide-menu.active{
     right: 0px;
 }
-/*-----------------------------//header-----------------------------*/
+.menu-title{
+    margin: 20px;
+    text-align: left;
+}
+.menu-item{
+    padding: 15px 0;
+    border-bottom: solid #cccccc 1px;
+}
+/*-----------------------------//slide-menu-----------------------------*/
+
+/*-----------------------------main-----------------------------*/
 .main{ 
     background-color: #a2bd1c;
     background-position: center;
@@ -135,3 +148,4 @@ img{
     color: #a2bd1c;
     background-color: #fff;
 }
+/*-----------------------------//main-----------------------------*/
