@@ -33,9 +33,3 @@ function count_down(){
     }
     
 }
-
-$(function(){
-    $('.setting-btn').on('click', function(){
-      $('.setting-menu').toggleClass('active');
-    });
-  }());
