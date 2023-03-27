@@ -28,8 +28,8 @@ $(function(){
   });
 });
 
-$('.menu-item').click(function(){
-  var $answer = $(this).find('.menu-item-content');
+$('.menu-item-title').click(function(){
+  var $answer = $(this).parent().find('.menu-item-content');
   if($answer.hasClass('active')){
     $answer.removeClass('active');
     $answer.slideUp('slow');
