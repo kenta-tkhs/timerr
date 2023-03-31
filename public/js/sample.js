@@ -119,4 +119,25 @@ var count = 180; //カウントダウンの数字を格納する変数
         count--;
         display.innerHTML = count;
     }
+    function count_down(){
+        let display = document.getElementById("default");
+        if(sum === 1){
+            if(times === 1){
+                display.innerHTML = "お疲れさまでした!";
+                clearInterval(stp);
+            }else{
+                sum = count + rest;
+                times--;
+                display.innerHTML = (4-times)+"セット終了!";
+            }            
+        }else{
+            sum--;
+            if(sum === count){
+                display.innerHTML = "休憩終了!";
+            }else{
+                display.innerHTML = sum % count;
+            }
+        }
+        
+    }
 

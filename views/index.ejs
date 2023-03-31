@@ -38,18 +38,18 @@
             <li class="menu-item">
                 <div class="menu-item-title">背景<span class="slide-icon">+</span></div>
                 <div class="menu-item-content">
-                    <div class="bg-title">カラー</div>
+                    <div class="bg-title">リラックス</div>
                     <span class="bg-item active" id="green"></span>
                     <span class="bg-item" id="blue"></span>
+                    <span class="bg-item" id="gray"></span>
+                    <div class="bg-title">活力を出す</div>
+                    <span class="bg-item" id="red"></span>
                     <span class="bg-item" id="yellow"></span>
-                    <div class="bg-title">画像</div>
-                    <span class="bg-item" id="rain"></span>
-                    <span class="bg-item"></span>
-                    <span class="bg-item"></span>
+                    <span class="bg-item" id="black"></span>
                 </div>
             </li>
             <li class="menu-item">
-                <div class="menu-item-title">背景<span class="slide-icon">+</span></div>
+                <div class="menu-item-title">音声<span class="slide-icon">+</span></div>
                 <div class="menu-item-content">
                     <span class="bg-item active" id="green"></span>
                     <span class="bg-item" id="blue"></span>
@@ -66,23 +66,10 @@
             </li>
         </ul>
         <div class="timer-img"><img src="/images/timer.webp" alt="timer"></div>
-        <p id="default"></p>  
-            <select id="count" name="count">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30" selected>30</option>
-                <option value="40">40</option>
-                <option value="50">50</option>
-                <option value="60">60</option>
-            </select>
-            <select id="rest" name="rest">
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="15" selected>15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-                <option value="30">30</option>
-            </select>
+        <p id="default"></p>
+        <form action=""></form>  
+            <label for="count">カウント：<input type="number" id="count" name="count" min="10" max="120" step="5" required="required" value="30"></label>
+            <label for="rest">インターバル：<input type="number" id="rest" name="rest" min="5" max="30" step="5" required="required" value="5"></label>
             <input id="button1" type="button" value="始める" onclick="count_start()">
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

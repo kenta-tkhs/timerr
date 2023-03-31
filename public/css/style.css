@@ -8,6 +8,7 @@ body{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     color: #ffffff;
     font-size: 3rem;
+    box-sizing: border-box;
 }
 a{
     text-decoration: none;
@@ -178,9 +179,19 @@ img{
 #blue{
     background-color: #1c78bd;
 }
-#yellow{
-    background-color: #d7d700;
+#gray{
+    background-color: #828282;
 }
+#red{
+    background-color: #bf0005;
+}
+#yellow{
+    background-color: #e3e300;
+}
+#black{
+    background-color: #363636;
+}
+
 /*-----------------------------//bg-----------------------------*/
 
 /*-----------------------------main-----------------------------*/
@@ -195,6 +206,7 @@ img{
     justify-content: center;
     align-items: center;
     transition: all .5s;
+    background: url("images/Videotogif.gif");
 }
 .timer-img{
     max-width: 25vw;

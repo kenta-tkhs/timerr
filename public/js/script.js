@@ -1,9 +1,11 @@
 let display = document.getElementById("default");
-var obj1 = document.getElementById('count');
+var obj11 = document.getElementById('count');
+var obj1 = parseInt(30, 10);
 var count = 10;
-let obj2 = document.getElementById('rest');
+let obj22 = document.getElementById('rest');
+var obj2 = parseInt(15, 10);
 let rest = 5;
-let sum = count + rest;
+let sum = obj1 + obj2;
 let times = 4;
 
 
@@ -19,16 +21,16 @@ function count_down(){
             display.innerHTML = "お疲れさまでした!";
             clearInterval(stp);
         }else{
-            sum = count + rest;
+            sum = obj1 + obj2;
             times--;
             display.innerHTML = (4-times)+"セット終了!";
         }            
     }else{
         sum--;
-        if(sum === count){
+        if(sum === obj1){
             display.innerHTML = "休憩終了!";
         }else{
-            display.innerHTML = sum % count;
+            display.innerHTML = sum % obj1;
         }
     }
     
