@@ -119,6 +119,11 @@ img{
 .menu-exit.active{
     display: block;
 }
+.menu-exit.active:hover{
+    background-color: #555555;
+    color: #ffffff;
+    transition: all .5s;
+}
 .menu-title{
     margin: 20px;
     text-align: left;
@@ -154,6 +159,22 @@ img{
     margin: 10px 30px;
     transition: all .5s;
 }
+.menu-item-content.timer.active{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+label{
+    font-size: 2rem;
+    margin: 10px 0;
+}
+.timer-setting{
+    height: 30px;
+    width: 50px;
+    text-align: center;
+}
+
 /*-----------------------------//slide-menu-----------------------------*/
 
 /*-----------------------------bg-----------------------------*/

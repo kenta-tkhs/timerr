@@ -1,12 +1,9 @@
 let display = document.getElementById("default");
-var obj11 = document.getElementById('count');
-var obj1 = parseInt(30, 10);
-var count = 10;
-let obj22 = document.getElementById('rest');
-var obj2 = parseInt(15, 10);
+let count = 30;
 let rest = 5;
-let sum = obj1 + obj2;
+let sum = count + rest;
 let times = 4;
+let music = new Audio('clock.mp3');
 
 
 function count_start(){
@@ -21,16 +18,17 @@ function count_down(){
             display.innerHTML = "お疲れさまでした!";
             clearInterval(stp);
         }else{
-            sum = obj1 + obj2;
+            sum = count + rest;
             times--;
             display.innerHTML = (4-times)+"セット終了!";
         }            
     }else{
         sum--;
-        if(sum === obj1){
+        if(sum === count){
             display.innerHTML = "休憩終了!";
         }else{
-            display.innerHTML = sum % obj1;
+            display.innerHTML = sum % count;
+            music.loop();
         }
     }
     
