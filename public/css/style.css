@@ -230,8 +230,8 @@ label{
     background: url("images/Videotogif.gif");
 }
 .timer-img{
-    max-width: 25vw;
-    width: 400px
+    max-width: 500px;
+    min-width: 25vw;
 }
 #button1{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -251,3 +251,29 @@ label{
     background-color: #fff;
 }
 /*-----------------------------//main-----------------------------*/
+
+@media screen and (max-width: 768px) {
+    body{
+        font-size: 1.7rem;
+    }
+    .header-title{
+        margin-left: 10px;
+    }
+    .header-title p{
+        margin-left: 5px;
+    }
+    .stretch-img{
+        width: 30px;
+        height: 30px;
+    }
+    .login{
+        margin-right: 40px;
+    }
+    .humberger-menu{
+        right: 20px;
+    }
+    .timer-img{
+        width: 50vw;
+    }
+
+}
