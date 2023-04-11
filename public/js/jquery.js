@@ -14,6 +14,12 @@ $(function() {
   });
 });
 
+$(function() {
+  $('#button1').on('click', function(){
+    $('.timer-img').toggleClass('active');
+  });
+});
+
 $(function(){
   $('.bg-item').on('click', function(){
     var $color = $(this).attr('id');

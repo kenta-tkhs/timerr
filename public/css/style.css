@@ -227,11 +227,13 @@ label{
     justify-content: center;
     align-items: center;
     transition: all .5s;
-    background: url("images/Videotogif.gif");
 }
 .timer-img{
     max-width: 500px;
     min-width: 25vw;
+}
+.timer-img.active{
+    display: none;
 }
 #button1{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -249,6 +251,12 @@ label{
     transition: all .5s;
     color: #a2bd1c;
     background-color: #fff;
+}
+#default{
+    position: absolute;
+    z-index: 10;
+    top: 30%;
+    left: 50%;
 }
 /*-----------------------------//main-----------------------------*/
 
