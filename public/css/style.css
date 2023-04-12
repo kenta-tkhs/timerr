@@ -234,6 +234,7 @@ label{
 }
 .timer-img.active{
     display: none;
+    transition: all .5s;
 }
 #button1{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -246,17 +247,27 @@ label{
     outline: none;
     padding: 10px 25px;
     appearance: none;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 #button1:hover{
     transition: all .5s;
     color: #a2bd1c;
     background-color: #fff;
 }
+#button1.active{
+    display: none;
+    transition: all .5s;
+}
 #default{
     position: absolute;
+    transform: translateX(-50%);
     z-index: 10;
-    top: 30%;
+    top: 50%;
     left: 50%;
+    font-size: 5rem;
 }
 /*-----------------------------//main-----------------------------*/
 
