@@ -1,11 +1,26 @@
 let display = document.getElementById("default");
-let count = 30;
-let rest = 5;
+let count = Number(document.getElementById("count").value);
+let rest = Number(document.getElementById("rest").value);
 let sum = count + rest;
-let times = 4;
+let set = Number(document.getElementById("set").value);
+let set2 = set;
 let clock = document.getElementById("clock");
 let countdown = document.getElementById("countdown");
 let end = document.getElementById("end");
+
+document.getElementById("count").onchange = function() {
+    count = Number(document.getElementById("count").value); 
+    sum = count + rest;
+};
+document.getElementById("rest").onchange = function() {
+    rest = Number(document.getElementById("rest").value);
+    sum = count + rest; 
+};
+document.getElementById("set").onchange = function() {
+    set = Number(document.getElementById("set").value);
+    sum = count + rest;
+    set2 = set;
+};
 
 
 function count_start(){
@@ -16,14 +31,14 @@ function count_start(){
 function count_down(){
     let display = document.getElementById("default");
     if(sum === 1){
-        if(times === 1){
+        if(set === 1){
             display.innerHTML = "お疲れさまでした!";
             clearInterval(stp);
             end.play();
         }else{
             sum = count + rest;
-            times--;
-            display.innerHTML = (4-times)+"セット終了!";
+            set--;
+            display.innerHTML = (set2 - set)+"セット終了!";
             end.play();
         }            
     }else{
@@ -37,8 +52,7 @@ function count_down(){
             }else{
                 clock.play();
             }
-            display.innerHTML = sum % count;
-           
+            display.innerHTML = sum % count;      
         }
     }
     
