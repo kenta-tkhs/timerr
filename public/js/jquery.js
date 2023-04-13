@@ -16,8 +16,10 @@ $(function() {
 
 $(function() {
   $('#button1').on('click', function(){
-    $('.timer-img').toggleClass('active');
-    $(this).toggleClass('active');
+    $('.timer-img').fadeOut();
+    $(this).fadeOut();
+    $('.header').fadeOut();
+    $('.humberger-menu').fadeOut();
   });
 });
 

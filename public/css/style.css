@@ -87,8 +87,8 @@ img{
     right: 30px;
 }
 .humberger-menu:hover{
-    transition: all .5s;
     opacity: .5;
+    transition: all .5s;
 }
 .slide-menu{
     position: fixed;
@@ -232,10 +232,6 @@ label{
     max-width: 500px;
     min-width: 25vw;
 }
-.timer-img.active{
-    display: none;
-    transition: all .5s;
-}
 #button1{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 3rem;
@@ -251,15 +247,11 @@ label{
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    transition: all .3s;
 }
 #button1:hover{
-    transition: all .5s;
     color: #a2bd1c;
     background-color: #fff;
-}
-#button1.active{
-    display: none;
-    transition: all .5s;
 }
 #default{
     position: absolute;
@@ -269,6 +261,16 @@ label{
     left: 50%;
     font-size: 5rem;
 }
+svg{
+    -webkit-transform: rotate(-90deg);
+     transform: rotate(-90deg);
+}
+.timer-circle{
+    stroke-dasharray: 280; 
+    stroke-dashoffset: 280;
+    transition: all 1s linear;
+}
+
 /*-----------------------------//main-----------------------------*/
 
 @media screen and (max-width: 768px) {
