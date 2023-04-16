@@ -7,6 +7,10 @@ let set2 = set;
 let clock = document.getElementById("clock");
 let countdown = document.getElementById("countdown");
 let end = document.getElementById("end");
+let time = null;
+let initialOffset = 280;
+let i = 1;
+let count_time = false;
 
 document.getElementById("count").onchange = function() {
     count = Number(document.getElementById("count").value); 
@@ -22,19 +26,8 @@ document.getElementById("set").onchange = function() {
     set2 = set;
 };
 
-
-
 function count_start(){
     stp = setInterval(count_down, 1000);
-    var time = sum * set; 
-    var initialOffset = '280';
-    var i = 1;
-    var interval = setInterval(function() {
-        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/time)));
-        $('.timer-time').text(10-i);
-        if (i == time) { clearInterval(interval); } // 連続の場合： i=1; 
-        i++;
-    }, 1000);
 }
 
 function count_down(){
@@ -47,21 +40,32 @@ function count_down(){
         }else{
             sum = count + rest;
             set--;
+            i = 1;
+            count_time = false;
             display.innerHTML = (set2 - set)+"セット終了!";
             end.play();
-        }            
+        }
     }else{
         sum--;
+        time = sum % count;
         if(sum === count){
             display.innerHTML = "休憩終了!";
+            count_time = true;
+            i = 1;
             end.play();
         }else{
-            if(sum % count === 1 | sum % count === 2){
+            if(time === 1 | time === 2){
                 countdown.play();
             }else{
                 clock.play();
             }
-            display.innerHTML = sum % count;      
+            display.innerHTML = time;
         }
     }
+    if (count_time) {
+        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/count)));
+    }else{
+        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/rest)));
+    }
+    i++;
 }
