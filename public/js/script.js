@@ -1,6 +1,6 @@
 let display = document.getElementById("default");
-let count = Number(document.getElementById("count").value);
-let rest = Number(document.getElementById("rest").value);
+let count = Number(document.getElementById("count").value)+1;
+let rest = Number(document.getElementById("rest").value)+1;
 let sum = count + rest;
 let set = Number(document.getElementById("set").value);
 let set2 = set;
@@ -51,7 +51,6 @@ function count_down(){
         if(sum === count){
             display.innerHTML = "休憩終了!";
             count_time = true;
-            i = 1;
             end.play();
         }else{
             if(time === 1 | time === 2){
