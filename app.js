@@ -5,8 +5,11 @@ const bcrypt = require('bcrypt');
 const app = express();
 const ejs = require('ejs');
 
+
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
+app.use(express.cookieParser());
+app.use(app.router);
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -24,7 +27,8 @@ app.use(
 );
 
 app.get('/', (req, res) => {
-    res.render('index.ejs');
+  res.cookie('')
+  res.render('index.ejs');
 });
 
 app.get('/setting', (req, res) => {
