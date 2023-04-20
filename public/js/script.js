@@ -62,9 +62,9 @@ function count_down(){
         }
     }
     if (count_time) {
-        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/count)));
+        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/(count-2))));
     }else{
-        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/rest)));
+        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/(rest-0.5))));
     }
     i++;
 }
