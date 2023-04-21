@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ストレッチタイマー</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sign">
+        <div class="container">
+          <h1><a href="/list">BLOG</a></h1>
+          <div class="panel">
+            <h2>新規登録</h2>
+            <% if (errors.length > 0) { %>
+              <ul class="errors">
+                <% errors.forEach(error => { %>
+                  <li><%= error %></li>
+                <% }); %>
+              </ul>
+            <% } %>
+            <form action="/signup" method="post">
+              <p>ユーザー名</p>
+              <input type="text" name="username">
+              <p>メールアドレス</p>
+              <input type="text" name="email">
+              <p>パスワード</p>
+              <input type="password" name="password">
+              <input type="submit" value="登録する">
+              <a href="/list">一覧にもどる</a>
+            </form>
+          </div>
+          <p>アカウントをお持ちの場合<a href="/login">ログインする</a></p>
+        </div>
+    </div>  
+</body>
+</html>
