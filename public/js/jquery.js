@@ -15,7 +15,7 @@ $(function() {
 });
 
 $(function() {
-  $('#button1').on('click', function(){
+  $('#start-button').on('click', function(){
     $('.timer-img').fadeOut();
     $(this).fadeOut();
     $('.header').fadeOut();
@@ -37,15 +37,30 @@ $(function(){
   });
 });
 
-$('.menu-item-title').click(function(){
-  var $answer = $(this).parent().find('.menu-item-content');
-  if($answer.hasClass('active')){
-    $answer.removeClass('active');
-    $answer.slideUp('slow');
-    $(this).find('.slide-icon').text('+');
-  }else{
-    $answer.addClass('active');
-    $answer.slideDown('slow');
-    $(this).find('.slide-icon').text('-');
-  }
+$(function(){
+  $('.menu-item-title').on('click', function(){
+    var $parent = $(this).parent().find('.menu-item-content');
+    if($parent.hasClass('active')){
+      $parent.removeClass('active');
+      $parent.slideUp('slow');
+      $(this).find('.slide-icon').text('+');
+    }else{
+      $parent.addClass('active');
+      $parent.slideDown('slow');
+      $(this).find('.slide-icon').text('-');
+    }
+  });
 });
+
+let eye = document.getElementById("eye");
+eye.addEventListener('click', function () {
+  if (this.previousElementSibling.getAttribute('type') == 'password') {
+    this.previousElementSibling.setAttribute('type', 'text');
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+  } else {
+    this.previousElementSibling.setAttribute('type', 'password');
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+  }
+})

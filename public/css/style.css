@@ -236,7 +236,7 @@ label{
     max-width: 500px;
     min-width: 25vw;
 }
-#button1{
+#start-button{
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 3rem;
     background-color: transparent;
@@ -248,12 +248,12 @@ label{
     padding: 10px 25px;
     appearance: none;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     transition: all .3s;
 }
-#button1:hover{
+#start-button:hover{
     color: #a2bd1c;
     background-color: #fff;
 }
@@ -360,6 +360,15 @@ svg{
 }
 .exit:hover{
     color: #0555cd;
+}
+.password-wrapper{
+    display: flex;
+    align-items: center;
+}
+#eye{
+    position: absolute;
+    right: 70px;
+    cursor: pointer;
 }
 /*-----------------------------//signup-----------------------------*/
 

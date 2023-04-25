@@ -21,7 +21,10 @@
             <form action="/login" method="post" class="signup-form">
               <input class="signup" type="text" name="username" placeholder="ユーザー名">
               <input class="signup" type="email" name="email" placeholder="info@example.com">
-              <input class="signup" type="password" name="password" placeholder="パスワード">
+              <div class="password-wrapper">
+                <input class="signup" type="password" name="password" placeholder="パスワード">
+                <i id="eye" class="fa-solid fa-eye"></i>
+              </div>
               <input class="submit-btn" type="submit" value="ログインする">
             </form>
             <p class="login-text">アカウント作成がまだの方は<a href="/signup">新規登録する</a></p>
@@ -29,5 +32,8 @@
           </div>
         </div>
     </main>  
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
