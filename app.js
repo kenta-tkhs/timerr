@@ -43,13 +43,6 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  connection.query(
-    'SELECT * FROM users',
-    (error, results) => {
-      console.log(results);
-      res.render('hello.ejs');
-    }
-  );
   res.render('index.ejs');
 });
 
@@ -88,7 +81,7 @@ app.post('/signup',
     const email = req.body.email;
     const errors = [];
     connection.query(
-      'SELECT * FROM users',
+      'SELECT * FROM users WHERE email = ?',
       [email],
       (error, results) => {
         if (results.length > 0) {
@@ -107,12 +100,12 @@ app.post('/signup',
     const password = req.body.password;
     bcrypt.hash(password, 10, (error, hash) => {
       connection.query(
-        //'INSERT INTO users (username, email, password) VALUES (?, ?, ?)',//
-        'INSERT INTO users VALUES ?',
+        'INSERT INTO users (username, email, password) VALUES (?, ?, ?)',
         [username, email, hash],
         (error, results) => {
           req.session.userId = results.insertId;
           req.session.username = username;
+          res.redirect('/');
         }
       );
     });
@@ -136,7 +129,7 @@ app.post('/login', (req, res) => {
           if (isEqual) {
             req.session.userId = results[0].id;
             req.session.username = results[0].username;
-            res.redirect('/list');
+            res.redirect('/');
           } else {
             res.render('login.ejs');
           }
@@ -150,7 +143,7 @@ app.post('/login', (req, res) => {
 
 app.get('/logout', (req, res) => {
   req.session.destroy((error) => {
-    res.redirect('/list');
+    res.redirect('/');
   });
 });
 

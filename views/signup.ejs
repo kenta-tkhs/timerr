@@ -11,33 +11,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="sign">
       <div class="container">
-          <div class="panel">
-            <h2>新規登録</h2>
-            <% if (errors.length > 0) { %>
-              <ul class="errors">
-                <% errors.forEach(error => { %>
-                  <li><%= error %></li>
-                <% }); %>
-              </ul>
-            <% } %>
-            <form action="/signup" method="post">
-              <p>ユーザー名</p>
-              <input type="text" name="username">
-              <p>メールアドレス</p>
-              <input type="text" name="email">
-              <p>パスワード</p>
-              <input type="password" name="password">
-              <input type="submit" value="登録する">
-              <a href="/list">一覧にもどる</a>
-            </form>
-          </div>
-          <p>アカウントをお持ちの場合<a href="/login">ログインする</a></p>
+        <div class="panel">
+          <h1>新規登録</h1>
+          <% if (errors.length > 0) { %>
+            <ul class="errors">
+              <% errors.forEach(error => { %>
+                <li class="error-content"><%= error %></li>
+              <% }); %>
+            </ul>
+          <% } %>
+          <form action="/signup" method="post" class="signup-form">
+            <input class="signup" type="text" name="username" placeholder="ユーザー名">
+            <input class="signup" type="email" name="email" placeholder="info@example.com">
+            <input class="signup" type="password" name="password" placeholder="パスワード">
+            <input class="submit-btn" type="submit" value="登録する">
+          </form>
+          <p class="login-text">アカウントをお持ちの場合<a href="/login">ログインする</a></p>
+          <a href="/" class="exit">タイマーに戻る</a>
         </div>
+      </div>
     </main>  
 </body>
 </html>

@@ -7,10 +7,10 @@ let set2 = set;
 let clock = document.getElementById("clock");
 let countdown = document.getElementById("countdown");
 let end = document.getElementById("end");
-let time = null;
-let initialOffset = 280;
-let i = 1;
-let count_time = false;
+//let time = null;
+//let initialOffset = 280;
+//let i = 1;
+//let count_time = false;
 
 document.getElementById("count").onchange = function() {
     count = Number(document.getElementById("count").value); 
@@ -41,7 +41,7 @@ function count_down(){
             sum = count + rest;
             set--;
             i = 1;
-            count_time = false;
+            //count_time = false;
             display.innerHTML = (set2 - set)+"セット終了!";
             end.play();
         }
@@ -50,7 +50,7 @@ function count_down(){
         time = sum % count;
         if(sum === count){
             display.innerHTML = "休憩終了!";
-            count_time = true;
+            //count_time = true;
             end.play();
         }else{
             if(time === 1 | time === 2){
@@ -60,11 +60,6 @@ function count_down(){
             }
             display.innerHTML = time;
         }
-    }
-    if (count_time) {
-        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/(count-2))));
-    }else{
-        $('.timer-circle').css('stroke-dashoffset', initialOffset-(i*(initialOffset/(rest-0.5))));
     }
     i++;
 }

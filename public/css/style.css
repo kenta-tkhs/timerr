@@ -282,14 +282,84 @@ svg{
     height: 100vh;
 }
 .container{
+    font-size: 1.8rem;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     align-items: center;
     color: #4c4c4e;
 }
 .panel{
     color: #4c4c4e;
     background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
     padding: 30px;
-    width: 500px;
+    width: 330px;
+}
+.panel h1{
+    font-size: 2.5rem;
+}
+.errors{
+    border-radius: 10px;
+    color: #ee0000;
+    background-color: #fce2e2;
+    margin: 10px 0;
+    font-size: 1.6rem;
+}
+.error-content{
+    padding: 10px 0 0 10px;
+}
+.error-content:last-child{
+    padding-bottom: 10px;
+}
+.signup-form{
+    text-align: center;
+    margin: 20px;
+}
+.signup{
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: solid 1.5px #828282;
+    width: 250px;
+}
+.submit-btn{
+    cursor: pointer;
+    padding: 10px;
+    background-color: #498ffa;
+    color: #fff;
+    width: 150px;
+    border-radius: 10px;
+    border:solid 1px #2eb4fc;
+    margin: 15px 0;
+    transition: all .5s;
+}
+.submit-btn:hover{
+    background-color: #0667f9;
+}
+.login-text{
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.login-text a{
+    margin-left: 20px;
+    color: #1c78bd;
+    transition: all .5s;
+}
+.login-text a:hover{
+    color: #0555cd;
+}
+.exit{
+    font-size: 1.5rem;
+    color: #1c78bd;
+    transition: all .5s;
+}
+.exit:hover{
+    color: #0555cd;
 }
 /*-----------------------------//signup-----------------------------*/
 

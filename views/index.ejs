@@ -25,7 +25,7 @@
                 <div class="login">
                     <a href="/signup" class="sign-up">
                         <i class="fa-solid fa-right-to-bracket"></i>
-                        <p>ログイン</p>
+                        <p>サインアップ</p>
                     </a>
                 </div>      
             </div>
@@ -57,24 +57,30 @@
                     <span class="bg-item" id="black"></span>
                 </div>
             </li>
-            <li class="menu-item">
+            <!--<li class="menu-item">
                 <div class="menu-item-title">BGM<span class="slide-icon">+</span></div>
                 <div class="menu-item-content">
                     <span class="bg-item active" id="green"></span>
                     <span class="bg-item" id="blue"></span>
                     <span class="bg-item" id="yellow"></span>
                 </div>
+            </li>-->
+            <li class="menu-item">
+                <div class="menu-item-title"><a href="/login">ログイン</a></div>
+            </li>
+            <li class="menu-item">
+                <div class="menu-item-title"><a href="/logout">ログアウト</a></div>
             </li>
         </ul>
         <div class="timer-img"><img src="/images/timer.webp" alt="timer"></div>
-        <div class="item">
+        <!--<div class="item">
             <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
              <g>
               <title>Pie Timer</title>
               <circle id="circle" class="timer-circle" r="40" cy="81" cx="81" stroke-width="8" stroke="#ffffff" fill="none"/>
              </g>
             </svg>
-        </div>
+        </div>-->
         <p id="default"></p>
             <input id="button1" type="button" value="始める" onclick="count_start()">
     </main>
